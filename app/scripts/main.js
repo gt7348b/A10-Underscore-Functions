@@ -4,6 +4,7 @@ console.log('The Iron Yard Rocks');
 var test_array = [1, 2, 3, 4, 5, 6],
     filter_object,
     filter_return,
+    condition,
     map_object,
     map_function,
     map_return,
@@ -12,35 +13,44 @@ var test_array = [1, 2, 3, 4, 5, 6],
 
 var roscoe = roscoe || {};
 
-roscoe.stuff = {
+//roscoe.stuff = {
 
 
 //This is the filter
 
-    filter: function(name) {
+   roscoe.filter = function(name, condition) {
 
-        console.log(name);
+        filter_return = [];
+
+
+      return filter_return;
 
     },
 
 
 //This is the map function
 
-    map: function(test_array) {
+    roscoe.map = function(target_array, action) {
 
+        map_return = [];
 
+        var target;
+
+        for (target = 0; target != target_array.length; target++)
+
+        map_return[target] = action(target_array[target]);
+
+        return map_return;
     },
 
 
 //This is the reduce function
 
-    reduce: function(test_array) {
+    roscoe.reduce = function(target_array) {
     },
 
 
 //This is the other function
 
-    other: function(test_array) {
+    roscoe.other = function(target_array) {
     }
-
-};
