@@ -1,4 +1,4 @@
-console.log('The Iron Yard Rocks');
+//console.log('The Iron Yard Rocks');
 
 
 var test_array = [1, 2, 3, 4, 5, 6],
@@ -8,7 +8,8 @@ var test_array = [1, 2, 3, 4, 5, 6],
     map_object,
     map_function,
     map_return,
-    replace_return;
+    replace_return,
+    last_return;
 
 
 var roscoe = roscoe || {};
@@ -18,24 +19,7 @@ var roscoe = roscoe || {};
 
 //This is the filter
 
-   roscoe.filter = function(target_array, condition) {
 
-      console.log(target_array);
-      console.log(condition);
-      filter_return = [];
-
-      var item;
-
-      filter_return = target_array.forEach (function(item){
-                  if (item == condition) {
-                                return item};
-  //}
-
-      //function(num){ return num % 2 == 0; }
-
-    //  return filter_return;
-
-    },
 
 
 //This is the map function
@@ -62,5 +46,11 @@ var roscoe = roscoe || {};
 
 //This is the other function
 
-    roscoe.other = function(target_array) {
+    roscoe.last = function(target_array) {
+
+      var target_length = target_array.length;
+
+      console.log(target_length)
+
+      last_return = target_array[target_length - 1];
     }
