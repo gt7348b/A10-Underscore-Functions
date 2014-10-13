@@ -18,12 +18,22 @@ var roscoe = roscoe || {};
 
 //This is the filter
 
-   roscoe.filter = function(name, condition) {
+   roscoe.filter = function(target_array, condition) {
 
-        filter_return = [];
+      console.log(target_array);
+      console.log(condition);
+      filter_return = [];
 
+      var item;
 
-      return filter_return;
+      filter_return = target_array.forEach (function(item){
+                  if (item == condition) {
+                                return item};
+  //}
+
+      //function(num){ return num % 2 == 0; }
+
+    //  return filter_return;
 
     },
 
