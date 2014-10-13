@@ -30,8 +30,8 @@ roscoe.filter = function(target_array, condition) {
 
    target_array.forEach (function(item){
                console.log(item);
-               if ( condition == true) {
-                           filter_return = item};
+               if ( condition(item)) {
+                           filter_return [filter_return.length] = item};
                            console.log(filter_return);
                            });
 
@@ -62,7 +62,23 @@ roscoe.filter = function(target_array, condition) {
 
 //This is the reduce function
 
-    roscoe.reduce = function(target_array) {
+    roscoe.reduce = function(target_array, iteratee, memo, context) {
+
+      var value;
+
+      var sum;
+
+      memo;
+
+      for (value = 0; value != target_array.length; value++)
+
+      memo = iteratee(target_array[value]);
+
+      console.log(memo);
+
+      return memo;
+
+      replace_return = memo;
     },
 
 
