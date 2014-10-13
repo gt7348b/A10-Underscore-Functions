@@ -19,7 +19,27 @@ var roscoe = roscoe || {};
 
 //This is the filter
 
+roscoe.filter = function(target_array, condition) {
 
+   console.log(target_array);
+   console.log(condition);
+   filter_return = [];
+
+   var item;
+
+   target_array.forEach (function(item){
+               console.log(item);
+               if (condition) {
+                           filter_return = item};
+                           });
+
+  return filter_return;
+
+   //function(num){ return num % 2 == 0; }
+
+ //  return filter_return;
+
+ },
 
 
 //This is the map function
