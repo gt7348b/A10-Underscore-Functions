@@ -9,7 +9,8 @@ var test_array = [1, 2, 3, 4, 5, 6],
     map_function,
     map_return,
     replace_return,
-    last_return;
+    last_return,
+    initial_return;
 
 
 var roscoe = roscoe || {};
@@ -29,8 +30,9 @@ roscoe.filter = function(target_array, condition) {
 
    target_array.forEach (function(item){
                console.log(item);
-               if (condition) {
+               if ( condition == true) {
                            filter_return = item};
+                           console.log(filter_return);
                            });
 
   return filter_return;
@@ -64,7 +66,7 @@ roscoe.filter = function(target_array, condition) {
     },
 
 
-//This is the other function
+//This is the last function
 
     roscoe.last = function(target_array) {
 
@@ -73,4 +75,16 @@ roscoe.filter = function(target_array, condition) {
       console.log(target_length)
 
       last_return = target_array[target_length - 1];
+    }
+
+
+//This is the last function
+
+    roscoe.initial = function(target_array) {
+
+      var target_length = target_array.length;
+
+      console.log(target_length)
+
+      initial_return = target_array[0];
     }
