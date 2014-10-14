@@ -1,3 +1,3 @@
-## Yo, I'm a Readme
+## A10 - Recreate JS Underscore functions
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+This project will recreate several underscore functions using only javascript
