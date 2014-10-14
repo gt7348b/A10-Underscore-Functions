@@ -10,7 +10,8 @@ var test_array = [1, 2, 3, 4, 5, 6],
     map_return,
     replace_return,
     last_return,
-    initial_return;
+    initial_return,
+    reject_return;
 
 
 var roscoe = roscoe || {};
@@ -22,24 +23,41 @@ var roscoe = roscoe || {};
 
 roscoe.filter = function(target_array, condition) {
 
-   console.log(target_array);
-   console.log(condition);
+   //console.log(target_array);
+   //console.log(condition);
    filter_return = [];
 
    var item;
 
    target_array.forEach (function(item){
-               console.log(item);
+               //console.log(item);
                if ( condition(item)) {
                            filter_return [filter_return.length] = item};
-                           console.log(filter_return);
+                           //console.log(filter_return);
                            });
-
   return filter_return;
 
-   //function(num){ return num % 2 == 0; }
+},
 
- //  return filter_return;
+//This is the reject
+
+roscoe.reject = function(target_array, condition) {
+
+   //console.log(target_array);
+   //console.log(condition);
+   reject_return = [];
+
+   var item;
+
+   target_array.forEach (function(item){
+               //console.log(item);
+               if ( condition(item) == false) {
+                           reject_return [reject_return.length] = item};
+                           //console.log(reject_return);
+                           });
+  return reject_return;
+
+   //function(num){ return num % 2 == 0; }
 
  },
 
@@ -62,23 +80,21 @@ roscoe.filter = function(target_array, condition) {
 
 //This is the reduce function
 
-    roscoe.reduce = function(target_array, iteratee, memo, context) {
 
-      var value;
 
-      var sum;
+    roscoe.reduce = function(target_array, function_text) {
 
-      memo;
+      var target;
 
-      for (value = 0; value != target_array.length; value++)
+      for (target = 0; target != target_array.length; target++)
 
-      memo = iteratee(target_array[value]);
+      sum = function_text(target_array);
 
-      console.log(memo);
+      console.log(sum);
 
-      return memo;
+      return sum;
 
-      replace_return = memo;
+      replace_return = sum;
     },
 
 
