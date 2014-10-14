@@ -4,10 +4,10 @@ This project will recreate several underscore functions using only javascript.
 
 The following were recreated:
 
-_.filter
-_.reject
-_.map
-_.last
-_.first
+_.filter  =  roscoe.filter
+_.reject  =  roscoe.reject
+_.map     =  roscoe.map
+_.last    =  roscoe.last
+_.first   =  roscoe.first
 
 -.reduce was attempted.
