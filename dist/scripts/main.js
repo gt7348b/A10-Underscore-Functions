@@ -1047,7 +1047,7 @@ var roscoe = roscoe || {};
 //roscoe.stuff = {
 
 
-//This is the filter
+//This is the filter function
 
 roscoe.filter = function(target_array, condition) {
 
@@ -1110,13 +1110,17 @@ roscoe.reject = function(target_array, condition) {
 
 
 
-    roscoe.reduce = function(target_array, function_text) {
+    roscoe.reduce = function(target_array, initial_value) {
 
       var target;
 
+      initial_value = typeof initial_value !== 'undefined' ?  initial_value : 0;
+
+      sum = initial_value;
+
       for (target = 0; target != target_array.length; target++)
 
-      sum = function_text(target_array);
+      sum = sum + target_array[target];
 
       console.log(sum);
 
