@@ -1038,7 +1038,8 @@ var test_array = [1, 2, 3, 4, 5, 6],
     replace_return,
     last_return,
     initial_return,
-    reject_return;
+    reject_return,
+    sum;
 
 
 var roscoe = roscoe || {};
@@ -1066,7 +1067,7 @@ roscoe.filter = function(target_array, condition) {
 
 },
 
-//This is the reject
+//This is the reject function
 
 roscoe.reject = function(target_array, condition) {
 
@@ -1131,19 +1132,24 @@ roscoe.reject = function(target_array, condition) {
 
       var target_length = target_array.length;
 
-      console.log(target_length)
+      //console.log(target_length)
 
       last_return = target_array[target_length - 1];
+
+      return last_return;
     }
 
 
-//This is the last function
+//This is the first function
 
     roscoe.initial = function(target_array) {
 
       var target_length = target_array.length;
 
-      console.log(target_length)
+      // console.log(target_length)
 
       initial_return = target_array[0];
+
+      return initial_return;
     }
+
